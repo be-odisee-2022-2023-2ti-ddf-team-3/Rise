@@ -9,7 +9,7 @@
     <script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
 </head>
 <body>
-<div th:replace="fragments/header :: header">Header</div>
+<div th:replace="~{fragments/header :: header}">Header</div>
 <div class="container">
     <div class="text-left">
         <h1>Lijst van ambassadeurs</h1>
@@ -37,7 +37,7 @@
         </table>
         <a class="btn btn-success btn-block" role="button" th:href="@{/nieuwePersoon.html}">Nieuwe persoon</a>
     </div><br/><br/>
-    <div th:replace="fragments/footer :: footer">&copy; 2013 The Static Templates</div>
+    <div th:replace="~{fragments/footer :: footer}">&copy; 2013 The Static Templates</div>
 </div>
 </body>
 </html> 

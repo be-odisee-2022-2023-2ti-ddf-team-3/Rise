@@ -55,8 +55,8 @@ public class DemoPlannerSessieServiceImpl implements DemoPlannerSessieService {
 	}
 
     @Override
-    public Persoon editPersoon(int id, String voornaam, String familienaam, String emailadres, String paswoord) {
-        return null;
+    public Persoon updatePersoon(Persoon persoon) {
+        return persoonRepository.save(persoon);
     }
 
     @Override
