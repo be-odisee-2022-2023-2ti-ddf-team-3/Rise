@@ -9,10 +9,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.*;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Service("DemoPlannerSessieService")
 @Transactional(propagation = Propagation.SUPPORTS, readOnly=true)
@@ -62,6 +59,36 @@ public class DemoPlannerSessieServiceImpl implements DemoPlannerSessieService {
     @Override
     public void verwijderPersoonMetId(int id) {
         persoonRepository.delete(zoekPersoonMetId(id));
+    }
+
+    @Override
+    public List<Demo> geefAlleDemos() {
+        return null;
+    }
+
+    @Override
+    public Demo voegDemoToe(String naam, String adres, String status) {
+        return null;
+    }
+
+    @Override
+    public Demo zoekDemoMetId(int id) {
+        return null;
+    }
+
+    @Override
+    public Demo zoekDemoMetNaam(String email) {
+        return null;
+    }
+
+    @Override
+    public Demo editDemo(int id, String naam, String adres, String status) {
+        return null;
+    }
+
+    @Override
+    public void verwijderDemoMetId(int id) {
+
     }
 
 

@@ -37,4 +37,21 @@ public class Demo implements Serializable {
         this.adres = adres;
         this.status = status;
     }
+
+    public int getId() {return id;}
+    public String getNaam() {
+        return naam;
+    }
+
+    public String getAdres() {
+        return adres;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setNaam(String naam) {this.naam = naam;}
+    public void setAdres(String adres) {this.adres = adres;}
+    public void setStatus(String status) {this.status = status;}
 }
