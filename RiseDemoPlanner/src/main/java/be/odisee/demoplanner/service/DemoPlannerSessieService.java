@@ -12,4 +12,7 @@ public interface DemoPlannerSessieService {
     public Persoon zoekPersoonMetId(int id);
 
 	public Persoon zoekPersoonMetEmail(String email);
+    public Persoon editPersoon(int id, String voornaam, String familienaam, String emailadres, String paswoord);
+
+    public void verwijderPersoonMetId(int id);
 }

@@ -6,7 +6,9 @@ import be.odisee.demoplanner.service.DemoPlannerSessieService;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
@@ -61,4 +63,28 @@ public class PersoonController {
     }
     // je zal naar de detailpagina van de toegevoegde persoon gaan
 
+//    @GetMapping(value={"/editPersoon/{id}"})
+//    @ResponseStatus(HttpStatus.NO_CONTENT)
+//    public String editPersoon(@PathVariable(name = "id") Integer id) {
+//        return "/index";
+//    }
+
+    @GetMapping(value={"/editPersoon/{id}"})
+    public String editPersoon(@PathVariable(name = "id") Integer id, ModelMap model) {
+        Persoon persoon = demoPlannerSessieService.zoekPersoonMetId(id);
+        model.addAttribute("persoon",persoon);
+        return "editPersoon";
+    }
+
+    @GetMapping(value={"/delete/{id}"})
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public String deletePersoon(@PathVariable(name = "id") Integer id) {
+        demoPlannerSessieService.verwijderPersoonMetId(id);
+        return "/index";
+    }
+
+    @GetMapping(value={"/demo"})
+    public String getdemo() {
+        return "demo";
+    }
 }

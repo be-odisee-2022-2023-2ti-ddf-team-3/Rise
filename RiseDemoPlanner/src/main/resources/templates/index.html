@@ -13,15 +13,29 @@
 <div class="container">
     <div class="text-left">
         <h1>Lijst van ambassadeurs</h1>
-        <ul style="list-style-type: none;">
-        	<li th:each="persoon : ${personen}">
-        		<a th:href="@{/persoon.html(id=${persoon.id})}">
-	   	     		<span th:text="${persoon.voornaam}">vn</span>
-	   	     		<span th:text="${persoon.familienaam}">vn</span>
-	   	     	</a>
-   	     	</li>
-        </ul>
-        <a th:href="@{/nieuwePersoon.html}">Nieuwe persoon</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">voornaam</th>
+                    <th scope="col">familienaam</th>
+                    <th scope="col">emailadres</th>
+                    <th scope="col">paswoord</th>
+                    <th scope="col">acties</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:each="persoon : ${personen}">
+                <th scope="row" th:text="${persoon.id}"></th>
+                <td th:text="${persoon.voornaam}"></td>
+                <td th:text="${persoon.familienaam}"></td>
+                <td th:text="${persoon.emailadres}"></td>
+                <td th:text="${persoon.paswoord}"></td>
+                <td><a th:href="@{/persoon.html(id=${persoon.id})}" class="btn btn-info" role="button">Detail</a></td>
+            </tr>
+            </tbody>
+        </table>
+        <a class="btn btn-success btn-block" role="button" th:href="@{/nieuwePersoon.html}">Nieuwe persoon</a>
     </div><br/><br/>
     <div th:replace="fragments/footer :: footer">&copy; 2013 The Static Templates</div>
 </div>

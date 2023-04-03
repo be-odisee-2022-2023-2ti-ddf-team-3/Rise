@@ -13,11 +13,13 @@
 <div class="container">
     <div class="text-left">
         <h1>Details van persoon</h1>
-        <p><b>Id:</b> <span th:text="${persoon.id}">id</span> </p> 
-        <p><b>Voornaam:</b> <span th:text="${persoon.voornaam}">id</span> </p> 
-        <p><b>Familienaam:</b> <span th:text="${persoon.familienaam}">id</span> </p> 
-        <p><b>E-mailadres:</b> <span th:text="${persoon.emailadres}">id</span> </p> 
-        <p><b>Paswoord:</b> <span th:text="${persoon.paswoord}">id</span> </p> 
+        <p><b>Id:</b> <span th:text="${persoon.id}">id</span> </p>
+        <p><b>Voornaam:</b> <span th:text="${persoon.voornaam}">id</span> </p>
+        <p><b>Familienaam:</b> <span th:text="${persoon.familienaam}">id</span> </p>
+        <p><b>E-mailadres:</b> <span th:text="${persoon.emailadres}">id</span> </p>
+        <p><b>Paswoord:</b> <span th:text="${persoon.paswoord}">id</span> </p>
+        <p><a th:href="@{'/editPersoon/'+${persoon.id}}" class="btn btn-primary btn-md" >Edit persoon</a>
+        <a th:href="@{'/delete/'+${persoon.id}}" class="btn btn-danger btn-md" role="button" >Delete persoon</a></p>
         <a th:href="@{/home.html}">Lijst van alle personen</a>
     </div>
     <div th:replace="fragments/footer :: footer">&copy; 2013 The Static Templates</div>

@@ -9,6 +9,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.*;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Service("DemoPlannerSessieService")
 @Transactional(propagation = Propagation.SUPPORTS, readOnly=true)
@@ -39,7 +43,7 @@ public class DemoPlannerSessieServiceImpl implements DemoPlannerSessieService {
 		return persoonRepository.findByEmailadres(email);
 	}
 
-	@Transactional(propagation= Propagation.REQUIRED,readOnly=false)
+    @Transactional(propagation= Propagation.REQUIRED,readOnly=false)
     public Persoon voegPersoonToe(String voornaam, String familienaam, String emailadres, String paswoord) {
 
         return persoonRepository.save( createPersoon(voornaam,familienaam,emailadres,paswoord) );
@@ -49,5 +53,26 @@ public class DemoPlannerSessieServiceImpl implements DemoPlannerSessieService {
 
         return new Persoon( voornaam, familienaam, emailadres,paswoord);
 	}
+
+    @Override
+    public Persoon editPersoon(int id, String voornaam, String familienaam, String emailadres, String paswoord) {
+        return null;
+    }
+
+    @Override
+    public void verwijderPersoonMetId(int id) {
+        persoonRepository.delete(zoekPersoonMetId(id));
+    }
+
+
+//    @GetMapping("/edit")
+//    public Persoon editPersoon(@RequestParam("id") int id, Model model) {
+//        Persoon persoon;
+//
+//        EntryData entryData = persoonRepository.prepareEntryDataToEdit(id);
+//        prepareForm(entryData, model);
+//        model.addAttribute("message", "Update or Delete this entry please - or Cancel");
+//        return Persoon;
+//    }
 
 }
