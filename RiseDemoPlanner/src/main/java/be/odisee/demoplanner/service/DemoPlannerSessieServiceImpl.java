@@ -18,6 +18,7 @@ public class DemoPlannerSessieServiceImpl implements DemoPlannerSessieService {
     @Autowired
     private PersoonRepository persoonRepository = null;
 
+
     public DemoPlannerSessieServiceImpl(){}
 
     public List<Persoon> geefAllePersonen() {
@@ -61,9 +62,11 @@ public class DemoPlannerSessieServiceImpl implements DemoPlannerSessieService {
         persoonRepository.delete(zoekPersoonMetId(id));
     }
 
+
+    private DemoRepository demoRepository = null;
     @Override
     public List<Demo> geefAlleDemos() {
-        return null;
+        return demoRepository.findAll();
     }
 
     @Override

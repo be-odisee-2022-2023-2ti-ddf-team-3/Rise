@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/")
+
 public class PersoonController {
 
     @Autowired
@@ -83,8 +84,4 @@ public class PersoonController {
         return "/index";
     }
 
-    @GetMapping(value={"/demo"})
-    public String getdemo() {
-        return "demo";
-    }
 }
