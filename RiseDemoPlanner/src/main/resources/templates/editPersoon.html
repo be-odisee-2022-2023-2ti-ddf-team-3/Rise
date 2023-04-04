@@ -9,64 +9,35 @@
     <script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
 </head>
 <body>
-<div th:replace="fragments/header :: header">Header</div>
+<div th:replace="~{fragments/header :: header}">Header</div>
 <div class="container">
     <div class="text-left">
         <h1>Aanpassen persoon</h1>
-        <form method="POST" th:object="${persoon}">
-<!--          <fieldset>-->
-<!--            <div><label>Voornaam:</label><input type="text" th:field = "*{voornaam}" value="test"/></div>-->
-<!--            <div><label>Familienaam:</label><input type="text" th:field = "*{familienaam}"/></div>-->
-<!--            <div><label>E-mailadres:</label><input type="text" th:field = "*{emailadres}"/></div>-->
-<!--            <div><label>Paswoord:</label><input type="text" th:field = "*{paswoord}"/></div>-->
-<!--            <div><input name="save" type="submit" value="save"/></div>-->
-<!--          </fieldset>-->
+        <form class="row g-4" method="POST" th:action="@{/personen/{id} (id=${persoon.id})}" th:object="${persoon}">
+
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label" >Voornaam</label>
-                <input type="email" class="form-control" id="inputEmail4" th:field = "*{voornaam}">
+                <label for="inputVoornaam" class="form-label" >Voornaam</label>
+                <input type="text" class="form-control" id="inputVoornaam" th:field = "*{voornaam}">
             </div>
             <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Familienaam</label>
-                <input type="password" class="form-control" id="inputPassword4" th:field = "*{familienaam}">
+                <label for="inputFamilienaam" class="form-label">Familienaam</label>
+                <input type="text" class="form-control" id="inputFamilienaam" th:field = "*{familienaam}">
             </div>
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <div class="col-md-12">
+                <label for="inputEmail" class="form-label">Emailadres</label>
+                <input type="email" class="form-control" id="inputEmail"  th:field = "*{emailadres}">
             </div>
-            <div class="col-12">
-                <label for="inputAddress2" class="form-label">Address 2</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            <div class="col-md-12">
+                <label for="inputPaswoord" class="form-label">Paswoord</label>
+                <input type="text" class="form-control" id="inputPaswoord" placeholder="Veilig123"  th:field = "*{paswoord}">
             </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-<!--            <div class="col-md-4">-->
-<!--                <label for="inputState" class="form-label">State</label>-->
-<!--                <select id="inputState" class="form-select">-->
-<!--                    <option selected>Choose...</option>-->
-<!--                    <option>...</option>-->
-<!--                </select>-->
-<!--            </div>-->
-            <div class="col-md-2">
-                <label for="inputZip" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
-            </div>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Check me out
-                    </label>
-                </div>
-            </div>
-            <div class="col-12">
-                <button type="submit" name="save" class="btn btn-primary">save</button>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">save</button>
             </div>
         </form>
 
     </div>
-  <div th:replace="fragments/footer :: footer">&copy; 2013 The Static Templates</div>
+  <div th:replace="~{fragments/footer :: footer}">&copy; 2013 The Static Templates</div>
 </div>
 </body>
 </html>

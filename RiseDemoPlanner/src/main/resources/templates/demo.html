@@ -14,14 +14,13 @@
     <div class="text-left">
         <h1>Lijst van ambassadeurs</h1>
         <ul style="list-style-type: none;">
-        	<li th:each="persoon : ${personen}">
-        		<a th:href="@{/persoon.html(id=${persoon.id})}">
-	   	     		<span th:text="${persoon.voornaam}">vn</span>
-	   	     		<span th:text="${persoon.familienaam}">vn</span>
+        	<li th:each="demo : ${demos}">
+        		<a th:href="@{/persoon.html(id=${demo.id})}">
+	   	     		<span th:text="${demo.naam}">vn</span>
 	   	     	</a>
    	     	</li>
         </ul>
-        <a th:href="@{/nieuwePersoon.html}">Nieuwe persoon</a>
+        <a th:href="@{/nieuweDemo.html}">Nieuwe demo</a>
     </div><br/><br/>
     <div th:replace="fragments/footer :: footer">&copy; 2013 The Static Templates</div>
 </div>

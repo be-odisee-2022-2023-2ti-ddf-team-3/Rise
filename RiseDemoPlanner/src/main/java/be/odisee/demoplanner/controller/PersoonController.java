@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/")
@@ -70,20 +71,46 @@ public class PersoonController {
 //    }
 
     @GetMapping(value={"/editPersoon/{id}"})
-    public String editPersoon(@PathVariable(name = "id") Integer id, ModelMap model) {
-        Persoon persoon = demoPlannerSessieService.zoekPersoonMetId(id);
-        model.addAttribute("persoon",persoon);
+    public String editPersoon(@PathVariable Integer id, Model model) {
+        model.addAttribute("persoon", demoPlannerSessieService.zoekPersoonMetId(id));
         return "editPersoon";
+
+//        ModelAndView editView = new ModelAndView("editPersoon");
+//        Persoon persoon = demoPlannerSessieService.zoekPersoonMetId(id);
+////        model.addAttribute("persoon",persoon);
+//        editView.addObject("persoon", persoon);
+//        return editView;
     }
+    @PostMapping("/personen/{id}")
+    public String updatePersoon(@PathVariable Integer id, @ModelAttribute("persoon") Persoon persoon, Model model) {
+        // haal persoon op uit database
+        Persoon bestaandePersoon = demoPlannerSessieService.zoekPersoonMetId(id);
+        bestaandePersoon.setId(id);
+        bestaandePersoon.setVoornaam(persoon.getVoornaam());
+        bestaandePersoon.setFamilienaam(persoon.getFamilienaam());
+        bestaandePersoon.setEmailadres(persoon.getEmailadres());
+        bestaandePersoon.setPaswoord(persoon.getPaswoord());
+
+        // bewaar persoon object
+        demoPlannerSessieService.updatePersoon(bestaandePersoon);
+        return "redirect:/home.html";
+    }
+//    @PostMapping(value={"/edit/{id}"})
+//    public String savePersoon(@PathVariable("id") Integer id, @RequestBody Persoon persoon) {
+//        persoon.setId(id);
+//        demoPlannerSessieService.updatePersoon(persoon);
+//
+//        return "redirect:home.html";
+//    }
 
     @GetMapping(value={"/delete/{id}"})
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public String deletePersoon(@PathVariable(name = "id") Integer id) {
         demoPlannerSessieService.verwijderPersoonMetId(id);
-        return "/index";
+        return "redirect:/home.html";
     }
 
-    @GetMapping(value={"/demo"})
+    @GetMapping(value={"/demo.html"})
     public String getdemo() {
         return "demo";
     }

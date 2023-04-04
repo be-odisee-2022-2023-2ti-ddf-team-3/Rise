@@ -9,7 +9,7 @@
     <script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
 </head>
 <body>
-<div th:replace="fragments/header :: header">Header</div>
+<div th:replace="~{fragments/header :: header}">Header</div>
 <div class="container">
     <div class="text-left">
         <h1>Nieuwe persoon</h1>
@@ -24,7 +24,7 @@
         </form>
 
     </div>
-    <div th:replace="fragments/footer :: footer">&copy; 2013 The Static Templates</div>
+    <div th:replace="~{fragments/footer :: footer}">&copy; 2013 The Static Templates</div>
 </div>
 </body>
 </html>

@@ -9,7 +9,7 @@
     <script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
 </head>
 <body>
-<div th:replace="fragments/header :: header">Header</div>
+<div th:replace="~{fragments/header :: header}">Header</div>
 <div class="container">
     <div class="text-left">
         <h1>Details van persoon</h1>
@@ -22,7 +22,7 @@
         <a th:href="@{'/delete/'+${persoon.id}}" class="btn btn-danger btn-md" role="button" >Delete persoon</a></p>
         <a th:href="@{/home.html}">Lijst van alle personen</a>
     </div>
-    <div th:replace="fragments/footer :: footer">&copy; 2013 The Static Templates</div>
+    <div th:replace="~{fragments/footer :: footer}">&copy; 2013 The Static Templates</div>
 </div>
 </body>
 </html>
