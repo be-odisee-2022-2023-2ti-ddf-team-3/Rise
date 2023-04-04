@@ -110,8 +110,4 @@ public class PersoonController {
         return "redirect:/home.html";
     }
 
-    @GetMapping(value={"/demo.html"})
-    public String getdemo() {
-        return "demo";
-    }
 }
