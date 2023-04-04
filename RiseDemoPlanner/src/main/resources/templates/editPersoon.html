@@ -16,22 +16,21 @@
         <form class="row g-4" method="POST" th:action="@{/personen/{id} (id=${persoon.id})}" th:object="${persoon}">
 
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label" >Voornaam</label>
-                <input type="text" class="form-control" id="inputEmail4" th:field = "*{voornaam}">
+                <label for="inputVoornaam" class="form-label" >Voornaam</label>
+                <input type="text" class="form-control" id="inputVoornaam" th:field = "*{voornaam}">
             </div>
             <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Familienaam</label>
-                <input type="text" class="form-control" id="inputPassword4" th:field = "*{familienaam}">
+                <label for="inputFamilienaam" class="form-label">Familienaam</label>
+                <input type="text" class="form-control" id="inputFamilienaam" th:field = "*{familienaam}">
             </div>
             <div class="col-md-12">
-                <label for="inputAddress" class="form-label">Emailadres</label>
-                <input type="email" class="form-control" id="inputAddress"  th:field = "*{emailadres}">
+                <label for="inputEmail" class="form-label">Emailadres</label>
+                <input type="email" class="form-control" id="inputEmail"  th:field = "*{emailadres}">
             </div>
             <div class="col-md-12">
-                <label for="inputAddress2" class="form-label">Paswoord</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Veilig123"  th:field = "*{paswoord}">
+                <label for="inputPaswoord" class="form-label">Paswoord</label>
+                <input type="text" class="form-control" id="inputPaswoord" placeholder="Veilig123"  th:field = "*{paswoord}">
             </div>
-<!-
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary">save</button>
             </div>

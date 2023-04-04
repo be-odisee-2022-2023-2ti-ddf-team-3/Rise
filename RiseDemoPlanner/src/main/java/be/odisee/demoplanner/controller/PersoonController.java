@@ -93,7 +93,7 @@ public class PersoonController {
 
         // bewaar persoon object
         demoPlannerSessieService.updatePersoon(bestaandePersoon);
-        return "redirect:/home";
+        return "redirect:/home.html";
     }
 //    @PostMapping(value={"/edit/{id}"})
 //    public String savePersoon(@PathVariable("id") Integer id, @RequestBody Persoon persoon) {
@@ -107,10 +107,10 @@ public class PersoonController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public String deletePersoon(@PathVariable(name = "id") Integer id) {
         demoPlannerSessieService.verwijderPersoonMetId(id);
-        return "/index";
+        return "redirect:/home.html";
     }
 
-    @GetMapping(value={"/demo"})
+    @GetMapping(value={"/demo.html"})
     public String getdemo() {
         return "demo";
     }
