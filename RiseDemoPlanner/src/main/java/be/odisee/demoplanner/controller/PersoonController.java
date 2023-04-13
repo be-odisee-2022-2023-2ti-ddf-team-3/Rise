@@ -64,23 +64,12 @@ public class PersoonController {
     }
     // je zal naar de detailpagina van de toegevoegde persoon gaan
 
-//    @GetMapping(value={"/editPersoon/{id}"})
-//    @ResponseStatus(HttpStatus.NO_CONTENT)
-//    public String editPersoon(@PathVariable(name = "id") Integer id) {
-//        return "/index";
-//    }
-
     @GetMapping(value={"/editPersoon/{id}"})
     public String editPersoon(@PathVariable Integer id, Model model) {
         model.addAttribute("persoon", demoPlannerSessieService.zoekPersoonMetId(id));
         return "editPersoon";
-
-//        ModelAndView editView = new ModelAndView("editPersoon");
-//        Persoon persoon = demoPlannerSessieService.zoekPersoonMetId(id);
-////        model.addAttribute("persoon",persoon);
-//        editView.addObject("persoon", persoon);
-//        return editView;
     }
+
     @PostMapping("/personen/{id}")
     public String updatePersoon(@PathVariable Integer id, @ModelAttribute("persoon") Persoon persoon, Model model) {
         // haal persoon op uit database
@@ -95,13 +84,6 @@ public class PersoonController {
         demoPlannerSessieService.updatePersoon(bestaandePersoon);
         return "redirect:/home.html";
     }
-//    @PostMapping(value={"/edit/{id}"})
-//    public String savePersoon(@PathVariable("id") Integer id, @RequestBody Persoon persoon) {
-//        persoon.setId(id);
-//        demoPlannerSessieService.updatePersoon(persoon);
-//
-//        return "redirect:home.html";
-//    }
 
     @GetMapping(value={"/delete/{id}"})
     @ResponseStatus(HttpStatus.NO_CONTENT)
@@ -110,8 +92,4 @@ public class PersoonController {
         return "redirect:/home.html";
     }
 
-    @GetMapping(value={"/demo.html"})
-    public String getdemo() {
-        return "demo";
-    }
 }

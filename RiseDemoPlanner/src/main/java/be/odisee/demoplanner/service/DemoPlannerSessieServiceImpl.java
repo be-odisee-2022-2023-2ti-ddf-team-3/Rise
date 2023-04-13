@@ -3,16 +3,13 @@ package be.odisee.demoplanner.service;
 import be.odisee.demoplanner.domain.*;
 import be.odisee.demoplanner.dao.*;
 
-import java.util.List;
-import java.util.Optional;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.*;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Service("DemoPlannerSessieService")
 @Transactional(propagation = Propagation.SUPPORTS, readOnly=true)
@@ -64,15 +61,85 @@ public class DemoPlannerSessieServiceImpl implements DemoPlannerSessieService {
         persoonRepository.delete(zoekPersoonMetId(id));
     }
 
+    @Autowired
+    private DemoRepository demoRepository;
+    public List<Demo> geefAlleDemos() {
+        return demoRepository.findAll();
+    }
 
-//    @GetMapping("/edit")
-//    public Persoon editPersoon(@RequestParam("id") int id, Model model) {
-//        Persoon persoon;
-//
-//        EntryData entryData = persoonRepository.prepareEntryDataToEdit(id);
-//        prepareForm(entryData, model);
-//        model.addAttribute("message", "Update or Delete this entry please - or Cancel");
-//        return Persoon;
-//    }
+    @Transactional(propagation= Propagation.REQUIRED,readOnly=false)
+    public Demo zoekDemoMetId(int id){
+        Demo demo;
+
+        Optional<Demo> optionalDemo = demoRepository.findById(id);
+        if ( optionalDemo.isPresent() ) demo = optionalDemo.get();
+        else demo = null; // in dat geval hebben we geen persoon met dat id gevonden
+        return demo;
+    }
+
+    @Transactional(propagation= Propagation.REQUIRED,readOnly=false)
+    public Demo voegDemoToe(String naam, String adres, String status) {
+
+        return demoRepository.save( createDemo(naam,adres,status) );
+    }
+
+    private Demo createDemo( String naam, String adres, String status) {
+
+        return new Demo( naam, adres,status );
+    }
+
+    @Override
+    public Demo updateDemo(Demo demo) {
+        return demoRepository.save(demo);
+    }
+
+    @Override
+    public void verwijderDemoMetId(int id) {
+        demoRepository.delete(zoekDemoMetId(id));
+    }
+
+    @Autowired
+    private DatumRepository datumRepository;
+    public List<Datum> geefAlleDatums() {
+        return datumRepository.findAll();
+    }
+
+    public Map<Demo, List<Datum>> geefDemoMetDatums() {
+        Map<Demo, List<Datum>> DemosMetDatums = new LinkedHashMap<Demo, List<Datum>>();
+        return DemosMetDatums;
+//                datumRepository.findAll();
+    }
+
+
+    @Transactional(propagation= Propagation.REQUIRED,readOnly=false)
+    public Datum zoekDatumMetId(int id){
+        Datum datum;
+
+        Optional<Datum> optionalDatum = datumRepository.findById(id);
+        if ( optionalDatum.isPresent() ) datum = optionalDatum.get();
+        else datum = null; // in dat geval hebben we geen persoon met dat id gevonden
+        return datum;
+    }
+
+    @Transactional(propagation= Propagation.REQUIRED,readOnly=false)
+    public Datum voegDatumToe( LocalDateTime start, LocalDateTime einde, String status, Demo demo ) {
+
+        return datumRepository.save( createDatum( start, einde, status, demo ));
+    }
+
+    private Datum createDatum( LocalDateTime start, LocalDateTime einde, String status, Demo demo ) {
+
+        return new Datum( start, einde, status, demo );
+    }
+
+    @Override
+    public Datum updateDatum(Datum datum) {
+        return datumRepository.save(datum);
+    }
+
+    @Override
+    public void verwijderDatumMetId(int id) {
+        datumRepository.delete(zoekDatumMetId(id));
+    }
 
 }
