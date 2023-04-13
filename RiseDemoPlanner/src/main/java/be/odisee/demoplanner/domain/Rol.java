@@ -29,9 +29,7 @@ public abstract class Rol implements Serializable {
     @Index(name="IRol_usernaam",columnNames="usernaam")
     protected String usernaam;
 
-    @ManyToOne
-    @JoinColumn(name="sessie_id")
-    protected Sessie m_Sessie;
+
 
     @ManyToOne
     @JoinColumn(name="persoon_id")
@@ -39,18 +37,16 @@ public abstract class Rol implements Serializable {
 
     public Rol(){}
 
-    public Rol(String status, String usernaam, Sessie sessie, Persoon persoon) {
+    public Rol(String status, String usernaam, Persoon persoon) {
         this.status = status;
         this.usernaam = usernaam;
-        this.m_Sessie = sessie;
         this.persoon = persoon;
     }
 
-    public Rol(int id, String status, String usernaam, Sessie sessie, Persoon persoon) {
+    public Rol(int id, String status, String usernaam, Persoon persoon) {
         this.id = id;
         this.status = status;
         this.usernaam = usernaam;
-        this.m_Sessie = sessie;
         this.persoon = persoon;
     }
 
@@ -58,17 +54,11 @@ public abstract class Rol implements Serializable {
         return id;
     }
 
-    public Sessie getSessie(){
-        return m_Sessie;
-    }
 
     public String getUsernaam() {
         return usernaam;
     }
 
-    public void setSessie(Sessie newVal){
-        m_Sessie = newVal;
-    }
 
     public Persoon getPersoon() {
         return persoon;

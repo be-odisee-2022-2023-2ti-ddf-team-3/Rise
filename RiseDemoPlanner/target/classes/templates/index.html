@@ -3,6 +3,7 @@
 <head>
     <title>Personen</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
     <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/css/bootstrap.min.css}"/>
     <link href="../static/css/core.css" rel="stylesheet" media="screen" th:href="@{/css/core.css}" />
     <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -10,34 +11,69 @@
 </head>
 <body>
 <div th:replace="~{fragments/header :: header}">Header</div>
+<!--<header class="navbar navbar-inverse navbar-fixed-top bg-dark" data-bs-theme="dark">-->
+<!--    <div class="container">-->
+<!--        <a class="" href="#">Rise demo planner</a>-->
+<!--        <form class="navbar-nav">-->
+<!--            <button class="btn" href="#">Sign out</button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</header>-->
 <div class="container">
-    <div class="text-left">
-        <h1>Lijst van ambassadeurs</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">voornaam</th>
-                    <th scope="col">familienaam</th>
-                    <th scope="col">emailadres</th>
-                    <th scope="col">paswoord</th>
-                    <th scope="col">acties</th>
-                </tr>
-            </thead>
-            <tbody>
-            <tr th:each="persoon : ${personen}">
-                <th scope="row" th:text="${persoon.id}"></th>
-                <td th:text="${persoon.voornaam}"></td>
-                <td th:text="${persoon.familienaam}"></td>
-                <td th:text="${persoon.emailadres}"></td>
-                <td th:text="${persoon.paswoord}"></td>
-                <td><a th:href="@{/persoon.html(id=${persoon.id})}" class="btn btn-info" role="button">Detail</a></td>
-            </tr>
-            </tbody>
-        </table>
-        <a class="btn btn-success btn-block" role="button" th:href="@{/nieuwePersoon.html}">Nieuwe persoon</a>
-    </div><br/><br/>
-    <div th:replace="~{fragments/footer :: footer}">&copy; 2013 The Static Templates</div>
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse">
+            <div class="position-sticky pt-3 sidebar-sticky">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="#" class="nav-link active link-body-emphasis">
+                            <!--          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>-->
+                            Ambassadeurs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-body-emphasis">
+                            <!--          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>-->
+                            Demos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--    <div th:replace="~{fragments/sidebar :: sidebar}">Sidebar</div>-->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="container">
+                <div class="text-left">
+                    <h1>Lijst van ambassadeurs</h1>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">voornaam</th>
+                            <th scope="col">familienaam</th>
+                            <th scope="col">emailadres</th>
+                            <th scope="col">paswoord</th>
+                            <th scope="col">acties</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="persoon : ${personen}">
+                            <th scope="row" th:text="${persoon.id}"></th>
+                            <td th:text="${persoon.voornaam}"></td>
+                            <td th:text="${persoon.familienaam}"></td>
+                            <td th:text="${persoon.emailadres}"></td>
+                            <td th:text="${persoon.paswoord}"></td>
+                            <td><a th:href="@{/persoon.html(id=${persoon.id})}" class="btn btn-info" role="button">Detail</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <a class="btn btn-success btn-block" role="button" th:href="@{/nieuwePersoon.html}">Nieuwe persoon</a>
+                </div><br/><br/>
+                <div th:replace="~{fragments/footer :: footer}">&copy; 2013 The Static Templates</div>
+            </div>
+        </main>
+    </div>
+
 </div>
+
 </body>
 </html> 
