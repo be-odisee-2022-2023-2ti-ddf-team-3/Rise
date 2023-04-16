@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0a3b235b-c248-4eb7-b2f0-cfc745edd252" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/rise.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/rise.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/DemoPlannerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/DemoPlannerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/controller/PersoonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/controller/PersoonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/dao/PersoonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/dao/PersoonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Bijdrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Bijdrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Deelnemer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Deelnemer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Facilitator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Facilitator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Idee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Idee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Onderwerp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Onderwerp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Organisator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Organisator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Persoon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Persoon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Reactie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Reactie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Rol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Sessie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/domain/Sessie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/service/DemoPlannerSessieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/service/DemoPlannerSessieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/service/DemoPlannerSessieServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/java/be/odisee/demoplanner/service/DemoPlannerSessieServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/static/css/core.css" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/static/css/core.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/fragments/alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/fragments/alert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/fragments/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/nieuwePersoon.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/nieuwePersoon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/persoon.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/main/resources/templates/persoon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/test/java/be/odisee/demoplanner/acceptancetests/AcceptanceTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/test/java/be/odisee/demoplanner/acceptancetests/AcceptanceTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/test/java/be/odisee/demoplanner/acceptancetests/ParameterTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/test/java/be/odisee/demoplanner/acceptancetests/ParameterTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/test/java/be/odisee/demoplanner/acceptancetests/steps/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/test/java/be/odisee/demoplanner/acceptancetests/steps/StepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/src/test/resources/features/addPerson.feature" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/src/test/resources/features/addPerson.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/static/css/core.css" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/static/css/core.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/fragments/alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/fragments/alert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/fragments/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/nieuwePersoon.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/nieuwePersoon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/persoon.html" beforeDir="false" afterPath="$PROJECT_DIR$/../RiseDemoPlanner/target/classes/templates/persoon.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NYVt3bCcGHQIMTXBtJ0mgby6NQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/uyuma/OneDrive/Documenten/DDEF TEAM 3/Rise/rise-demo-planner&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;f13d280ead069b686fc727b6f4b86bc9&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="RiseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="timesheet3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="be.odisee.ti2.se4.rise.RiseApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a3b235b-c248-4eb7-b2f0-cfc745edd252" name="Changes" comment="" />
+      <created>1679841213893</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679841213893</updated>
+      <workItem from="1679841215152" duration="322000" />
+      <workItem from="1680037368273" duration="901000" />
+      <workItem from="1680121688276" duration="35000" />
+      <workItem from="1680121763436" duration="60000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
